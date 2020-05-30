@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <meta name="description" content="Sector's Edge guide">
+  <meta name="keywords" content="the noah, vercidium, sectors edge, guide">
+  <meta name="author" content="The Noah">
+  <meta property="og:description" content="Sector's Edge guide">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:title" content="Sector's Edge Guide">
+  <meta property="og:site_name" content="Sector's Edge Guide">
+  <meta property="og:url" content="https://the-noah.github.io/sectors-edge-guide">
+  <meta property="og:image" content="https://the-noah.github.io/sectors-edge-tournament/social.png">
+  <title>Sector's Edge Guide</title>
+  <style><%- css.style -%></style>
+</head>
+<body>
+  <div class="section">
+    <h1>Sector's Edge Guide</h1>
+    <p>Written guide to Sector's Edge, a brand new free-to-play first person shooter with a completely destructible environment.</p>
+  </div>
+  <% categories.forEach((category) => { %>
+    <div class="section category">
+      <h2><%= category %></h2><br>
+      <ul>
+        <% guides.filter((guide) => guide.category === category).forEach((guide) => { %>
+          <li><a href="#<%= guide.name.toLowerCase().replace(/ /g, "-") %>"><%= guide.name %></a></li>
+        <% }) %>
+      </ul>
+    <% guides.filter((guide) => guide.category === category).forEach((guide) => { %>
+      <div id="<%= guide.name.toLowerCase().replace(/ /g, "-") %>">
+        <h1><%= guide.name %></h1>
+        <p><%= guide.description %></p>
+        <h2>Win</h2>
+        <p><%= guide.win %></p>
+      </div>
+    <% }) %>
+    </div>
+  <% }) %>
+  <span style="flex:1"></span>
+  <footer>
+    <div>
+      <div>
+        <span>Navigation</span>
+        <a class="animated" href="#">Home</a>
+        <a class="animated" href="https://sectorsedge.com/" target="_blank" rel="noopener noreferrer">Game</a>
+      </div>
+      <div>
+        <span>Social</span>
+        <a class="animated" href="https://store.steampowered.com/app/1024890/Sectors_Edge/" target="_blank" rel="noopener noreferrer">Steam</a>
+        <a class="animated" href="https://www.youtube.com/channel/UCMwLVepB4YOgpyo48iyg7HA" target="_blank" rel="noopener noreferrer">YouTube</a>
+        <a class="animated" href="https://www.twitch.tv/vercidium" target="_blank" rel="noopener noreferrer">Twitch</a>
+        <a class="animated" href="https://www.instagram.com/vercidium/" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a class="animated" href="https://www.twitter.com/vercidium/" target="_blank" rel="noopener noreferrer">Twitter</a>
+        <a class="animated" href="https://discordapp.com/invite/87NvZhn" target="_blank" rel="noopener noreferrer">Discord</a>
+        <a class="animated" href="https://vercidium.itch.io/sectorsedge" target="_blank" rel="noopener noreferrer">Itch</a>
+        <a class="animated" href="https://emberapp.gg/profile/580-vercidium/" target="_blank" rel="noopener noreferrer">Ember</a>
+      </div>
+    </div>
+    <p>© 2020 sectorsedge.com</p>
+  </footer>
+</body>
+</html>

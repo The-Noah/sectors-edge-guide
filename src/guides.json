@@ -1,0 +1,14 @@
+[
+  {
+    "category": "Game Modes",
+    "name": "Spire",
+    "win": "Win a round by eliminating the other team. First to win 5 rounds wins the match.",
+    "description": "Build up to the floating green weapons and press C to grab it."
+  },
+  {
+    "category": "Game Modes",
+    "name": "Static",
+    "win": "Win a round by eliminating the other team. First to win 5 rounds wins the match.",
+    "description": "All players start with a randomized loadout. Eliminate the other team with what you've got!"
+  }
+]
