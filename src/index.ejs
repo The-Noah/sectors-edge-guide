@@ -22,22 +22,33 @@
     <h1>Sector's Edge Guide</h1>
     <p>Written guide to Sector's Edge, a brand new free-to-play first person shooter with a completely destructible environment.</p>
   </div>
-  <% categories.forEach((category) => { %>
-    <div class="section category">
-      <h2><%= category %></h2><br>
+  <div class="section">
+    <% categories.forEach((category) => { %>
+      <a href="#<%= category.name.toLowerCase().replace(/ /g, "-") %>"><b><%= category.name %></b></a><br>
       <ul>
-        <% guides.filter((guide) => guide.category === category).forEach((guide) => { %>
+        <% guides.filter((guide) => guide.category === category.name).forEach((guide) => { %>
           <li><a href="#<%= guide.name.toLowerCase().replace(/ /g, "-") %>"><%= guide.name %></a></li>
         <% }) %>
       </ul>
-    <% guides.filter((guide) => guide.category === category).forEach((guide) => { %>
-      <div id="<%= guide.name.toLowerCase().replace(/ /g, "-") %>">
-        <h1><%= guide.name %></h1>
-        <p><%= guide.description %></p>
-        <h2>Win</h2>
-        <p><%= guide.win %></p>
-      </div>
+      <% if(category.name !== categories[categories.length - 1].name){ %>
+        <br>
+      <% } %>
     <% }) %>
+  </div>
+  <% categories.forEach((category) => { %>
+    <div class="section category">
+      <h2 id="<%= category.name.toLowerCase().replace(/ /g, "-") %>"><%= category.name %></h2>
+      <p><%= category.description %>.</p><br>
+      <% guides.filter((guide) => guide.category === category.name).forEach((guide) => { %>
+        <div id="<%= guide.name.toLowerCase().replace(/ /g, "-") %>">
+          <h1><%= guide.name %></h1>
+          <p><%= guide.description %>.</p>
+          <% Object.keys(guide.sections || {}).forEach((section) => { %>
+            <h2><%= section %></h2>
+            <p><%= guide.sections[section] %></p>
+          <% }) %>
+        </div>
+      <% }) %>
     </div>
   <% }) %>
   <span style="flex:1"></span>

@@ -1,14 +1,33 @@
 [
   {
+    "category": "Quick Facts",
+    "name": "Digging Blocks",
+    "description": "Will give you more blocks to build with"
+  },
+  {
+    "category": "Quick Facts",
+    "name": "Get More Ammo",
+    "description": "By picking up the blue floating object after a player dies"
+  },
+  {
+    "category": "Quick Facts",
+    "name": "Capture Canisters Faster",
+    "description": "By having multiple teammates in the capture zone"
+  },
+  {
     "category": "Game Modes",
     "name": "Spire",
-    "win": "Win a round by eliminating the other team. First to win 5 rounds wins the match.",
-    "description": "Build up to the floating green weapons and press C to grab it."
+    "description": "Build up to a floating green weapon and press C to grab it",
+    "sections": {
+      "win": "Win a round by eliminating the other team. First to win 5 rounds wins the match."
+    }
   },
   {
     "category": "Game Modes",
     "name": "Static",
-    "win": "Win a round by eliminating the other team. First to win 5 rounds wins the match.",
-    "description": "All players start with a randomized loadout. Eliminate the other team with what you've got!"
+    "description": "All players start with a randomized loadout. Eliminate the other team with what you've got",
+    "sections": {
+      "win": "Win a round by eliminating the other team. First to win 5 rounds wins the match."
+    }
   }
 ]

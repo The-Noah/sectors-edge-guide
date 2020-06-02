@@ -1,3 +1,10 @@
 [
-  "Game Modes"
+  {
+    "name": "Quick Facts",
+    "description": "Little bits of information to help you win the game"
+  },
+  {
+    "name": "Game Modes",
+    "description": "Details about each game mode"
+  }
 ]
